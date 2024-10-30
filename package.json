@@ -1,0 +1,44 @@
+{
+	"name": "merpress",
+	"version": "1.1.5",
+	"description": "Merpress: add MermaidJS to WordPress",
+	"scripts": {
+		"build": "rm build/* && wp-scripts build && ./bin/tweak-built-php.sh",
+		"watch": "wp-scripts start --webpack-devtool=source-map",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"lint": "wp-scripts lint-md-docs ; wp-scripts lint-js src ; wp-scripts lint-style ; ./vendor/bin/phpcs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/n3f/merpress.git"
+	},
+	"keywords": [
+		"wordpress",
+		"mermaid"
+	],
+	"author": "n3f",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/n3f/merpress/issues"
+	},
+	"homepage": "https://github.com/n3f/merpress#readme",
+	"devDependencies": {
+		"@svgr/webpack": "^8.1.0",
+		"@wordpress/env": "^10.9.0",
+		"@wordpress/icons": "^10.9.0",
+		"@wordpress/scripts": "^30.1.0",
+		"husky": "^9.1.6",
+		"react": "^18.3.1",
+		"url-loader": "^4.1.1"
+	},
+	"files": [
+		"src",
+		"build",
+		"public",
+		"merpress.php",
+		"package.json",
+		"pnpm-lock.yaml",
+		"DEVELOPMENT.md"
+	],
+	"packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}
